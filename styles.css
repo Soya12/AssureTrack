@@ -1,0 +1,40 @@
+/* Custom Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8DAD0; /* Background color */
+  }
+  
+  header h1 {
+    color: #00CED1; /* Cyan color */
+    font-style: italic; /* Italic text for AssureTrack */
+  }
+  
+  header p {
+    color: #2D99AE; /* New subtitle color */
+    font-size: 1.25rem;
+    margin-top: 10px;
+  }
+  
+  .btn {
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #009999 !important; /* Darker cyan on hover */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Form Page Styling */
+  form {
+    background-color: #00CED1; /* Cyan background */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  form input, form button {
+    margin-bottom: 15px;
+  }
