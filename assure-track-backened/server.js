@@ -70,7 +70,9 @@ const Vehicle = mongoose.model("Vehicle", vehicleSchema);
 app.get("/health", (req, res) => {
     res.render("health"); // Removed `.ejs`, Express automatically finds it
 });
-
+app.get("*", (req, res) => {
+    res.render("index"); // Removed `.ejs`, Express automatically finds it
+});
 app.get("/homeappliances", (req, res) => {
     res.render("homeappliances"); // Removed `.ejs`, Express automatically finds it
 });
