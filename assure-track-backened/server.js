@@ -33,22 +33,22 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // ✅ Define Schemas
 const healthSchema = new mongoose.Schema({
-    policy_name: String,
-    provider_name: String,
-    policy_no: String,
-    start_date: Date,
-    expiry_date: Date,
-    premium_payment_date: Date,
-    emergency_contact: String
+    policyName: String,
+    providerName: String,
+    policyNumber: String,
+    startDate : Date,
+    expiryDate: Date,
+    premiumPaymentDate: Date,
+    emergencyContact: String
 });
 
 const applianceSchema = new mongoose.Schema({
-    appliance_name: String,
-    branch_name: String,
-    model_no: String,
-    purchase_date: Date,
-    expiry_date: Date,
-    service_centre_contact: String
+    applianceName: String,
+    branchName: String,
+    modelNo: String,
+    purchaseDate: Date,
+    expiryDate: Date,
+    serviceCentreontact: String
 });
 
 const vehicleSchema = new mongoose.Schema({
@@ -99,7 +99,7 @@ app.post("/health", async (req, res) => {
         providerName: data.providerName,
         policyNumber: data.policyNumber,
         startDate: data.startDate,
-        expirydate: data.expirydate,
+        expiryDate: data.expirydate,
         premiumPaymentDate: data.premiumPaymentDate,
         emergencyContact: data.emergencyContact
     })
@@ -108,6 +108,22 @@ app.post("/health", async (req, res) => {
     res.json({ message: "Health Insurance Data Saved Successfully" });
 
 });
+
+app.post("/homeappliances", async (req, res) => {
+    const data = req.body;
+    const newAppl = new HomeAppliance({
+        policyName: data.policyName,
+        providerName: data.providerName,
+        policyNumber: data.policyNumber,
+        startDate: data.startDate,
+        expiryDate: data.expiryDate,
+        premiumPaymentDate: data.premiumPaymentDate,
+        emergencyContact: data.emergencyContact
+    })
+    await newppl.save();
+    res.json({ message: "Health Insurance Data Saved Successfully" });
+});
+
 
 app.get("/index", (req, res) => {
     res.render("index"); // Removed `.ejs`, Express automatically finds it

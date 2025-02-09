@@ -21,9 +21,9 @@
   <!-- Home Appliances Form Page Section -->
   <section class="container my-5">
     <h2 class="mb-4 text-center" style="color: #F8DAD0;">Home Appliances Details</h2>
-    <form>
+    <form action="/homeappliances" method="POST"></form>
       <div class="mb-3">
-        <input type="text" class="form-control" Appliance name="applianceName"  placeholder="Appliance Name" required>
+        <input type="text" class="form-control"  name="applianceName"  placeholder="Appliance Name" required>
       </div>
       <div class="mb-3">
         <input type="text" class="form-control" name ="branch " placeholder="Brand" required>
@@ -32,21 +32,21 @@
         <input type="text" class="form-control" name="modelNumber" placeholder="Model Number" required>
       </div>
       <div class="mb-3">
-        <input type="date" class="form-control" name ="purchasedate" placeholder="Purchase Date" required>
+        <input type="date" class="form-control" name ="purchaseDate" placeholder="Purchase Date" required>
       </div>
       <div class="mb-3">
-        <input type="date" class="form-control"  name ="expirydate" placeholder="Expiry Date" required>
+        <input type="date" class="form-control"  name ="expiryDate" placeholder="Expiry Date" required>
       </div>
       <div class="mb-3">
-        <input type="text" class="form-control" name ="servicecentrecontact" placeholder="Service Centre Contact" required>
+        <input type="text" class="form-control" name ="serviceCentreContact" placeholder="Service Centre Contact" required>
       </div>
       <button type="submit" class="btn" style="background-color: #F8DAD0; color: #00CED1;">Submit</button>
     </form>
   </section>
 
   <!-- Bootstrap JS and Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+ <!--  <script>
     document.addEventListener("DOMContentLoaded", function () {
       const form = document.querySelector("form");
   
@@ -74,11 +74,11 @@
         }
       });
     });
-  </script>
-<section id="saved-home-appliance-records">
-  <h2>Saved Home Appliance Records</h2>
-  <table border="1">
-      <thead>
+  </script>-->
+<!---//<section id="saved-home-appliance-records">
+  //<h2>Saved Home Appliance Records</h2>
+  //<table border="1">
+    //  <thead>
           <tr>
               <th>Appliance name</th>
               <th>Branch </th>
@@ -115,7 +115,7 @@
   }
 
   window.onload = fetchHomeApplianceRecords;
-</script>
+</script> --->
 
 
 </body>
